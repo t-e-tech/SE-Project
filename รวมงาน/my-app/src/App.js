@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router,  Switch, Route } from "react-router-dom";
+
 import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './Page3';
@@ -6,12 +8,13 @@ import Page4 from './Page4';
 import Page5 from './Page5';
 import Page6 from './Page6';
 import Page7 from './Page7';
-import { BrowserRouter as Router, Routes,  Switch, Route } from "react-router-dom";
+import FirstScreen from "./เต้/screens/FirstScreen";
 
 const App = () => {
   return (
     <Router>
           <Routes>
+            <Route path="/" component={FirstScreen} exact />
             <Route path="/page1" element={<Page1 />} />
             <Route path="/page2" element={<Page2 />} />
             <Route path="/page3" element={<Page3 />} />
