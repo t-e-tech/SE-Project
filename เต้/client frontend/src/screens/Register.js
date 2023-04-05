@@ -72,3 +72,20 @@ const Register = ({ location, history }) => {
 };
 
 export default Register;
+
+
+/*
+โค้ด Register.js เป็นไฟล์ที่ import React, { useEffect, useState } และอื่น ๆ เพื่อใช้ในการเขียนโค้ด React. โค้ดด้านล่างนี้อธิบายการทำงานของโค้ด Register.js:
+
+นำเข้า Header และอื่น ๆ ที่จำเป็นจากโมดูลอื่น ๆ
+ประกาศตัวแปร state สำหรับ name, email, และ password ด้วย useState
+ใช้คำสั่ง useSelector เพื่อเลือกข้อมูล userRegister จาก Redux store
+กำหนดตัวแปร redirect โดยตรวจสอบพารามิเตอร์ของ location.search และกำหนดค่าเริ่มต้นเป็น "/"
+ใช้ useEffect เพื่อตรวจสอบว่า userInfo มีค่าหรือไม่ และกระโดดไปยังหน้าที่กำหนดโดย redirect
+สร้างฟังก์ชัน submitHandler เพื่อส่งข้อมูลผู้ใช้เข้าสู่ระบบผ่านการเรียกใช้งาน dispatch(register(name, email, password))
+แสดงข้อความผิดพลาดหากมี error หรือแสดง Loading หากกำลังโหลดข้อมูล
+สร้างฟอร์มที่ใช้ในการลงทะเบียนและนำไปแสดงผลบนหน้า Register
+อัพเดตชื่อผู้ใช้, อีเมล์และรหัสผ่านผ่านฟังก์ชัน setName, setEmail, setPassword
+เมื่อกดปุ่ม Register จะเรียกใช้งาน submitHandler และส่งข้อมูลผู้ใช้ไปยังฟังก์ชัน dispatch(register(name, email, password))
+แสดงปุ่ม Login และลิงก์ไปยังหน้าเข้าสู่ระบบ (หรือหน้าที่กำหนดโดย redirect) หากมีบัญชีผู้ใช้แล้ว
+*/
