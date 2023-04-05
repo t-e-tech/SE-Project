@@ -7,16 +7,12 @@ import Page4 from './Page4';
 import Page5 from './Page5';
 import Page6 from './Page6';
 import Page7 from './Page7';
-import Nick_Register from './Nick_Register';
-import Nick_Login from './Nick_Login';
 
 function App() {
   return (
     <div className="App">
         <Router>
           <Routes>
-            <Route path="/" element={<Nick_Login />} />
-            <Route path="/register" element={<Nick_Register />} />
             <Route path="/page1" element={<Page1 />} />
             <Route path="/page2" element={<Page2 />} />
             <Route path="/page3" element={<Page3 />} />
