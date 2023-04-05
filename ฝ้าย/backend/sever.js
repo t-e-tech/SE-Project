@@ -97,11 +97,65 @@ app.get("/address", (req, res) => {
 
 app.get('/order_details', (req, res) => {
   db.query("SELECT * FROM order_details", (err, results, fields) => {
+    if (err) {
+      console.error('Error executing query: ' + err.stack);
+      return;
+    }
+    res.json(results);
+  });
+});
+
+// แสดงจำนวนยอดสินค้าที่ขายได้ในเดือนนี้
+app.get('/sales_this_month', (req, res) => {
+  const today = new Date();
+  const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+  const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+  db.query(`SELECT SUM(quantity) as total_sales FROM order_details WHERE order_date BETWEEN '${startOfMonth.toISOString()}' AND '${endOfMonth.toISOString()}'`,
+    (err, results, fields) => {
       if (err) {
-          console.error('Error executing query: ' + err.stack);
-          return;
+        console.error('Error executing query: ' + err.stack);
+        return;
       }
-      res.json(results);
+      res.json(results[0]);
+    });
+});
+
+// แสดงจำนวนยอดสินค้าที่ขายได้ทั้งหมด
+app.get('/total_sales', (req, res) => {
+  const sql = `SELECT SUM(quantity) as total_sales FROM order_details`;
+  db.query(sql, (err, results, fields) => {
+    if (err) {
+      console.error('Error executing query: ' + err.stack);
+      return;
+    }
+    res.json(results[0]);
+  });
+});
+
+// แสดงยอดสินค้าที่ขายในเดือนนี้
+app.get('/total_price_this_month', (req, res) => {
+  const today = new Date();
+  const startOfMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+  const endOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+  db.query(`SELECT SUM(total_price) as total_price FROM order_details WHERE order_date BETWEEN '${startOfMonth.toISOString()}' 
+  AND '${endOfMonth.toISOString()}'`,
+    (err, results, fields) => {
+      if (err) {
+        console.error('Error executing query: ' + err.stack);
+        return;
+      }
+      res.json(results[0]);
+    });
+});
+
+// แสดงยอดสินค้าที่ขายทั้งหมด
+app.get('/total_price', (req, res) => {
+  db.query('SELECT SUM(total_price) as total_price FROM order_details', (err, results, fields) => {
+    if (err) {
+      console.error('Error executing query: ' + err.stack);
+      return;
+    }
+    res.json(results[0]);
   });
 });
 
