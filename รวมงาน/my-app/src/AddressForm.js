@@ -1,3 +1,4 @@
+/*
 import Address from "./autocomplete";
 
 export default function AddressForm(props) {
@@ -64,3 +65,4 @@ export default function AddressForm(props) {
         </form>
     )
 }
+*/

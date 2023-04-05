@@ -1,11 +1,11 @@
 
 
-4.  # SERVER DEPENDENCIES
-
+# SERVER DEPENDENCIES
+    npm install
     npm install bcryptjs dotenv express express-async-handler jsonwebtoken mongoose morgan
     npm install -D concurrently nodemon
 
-5.  # SERVER .ENV
+# SERVER .ENV
 
     PORT = 5000
     NODE_ENV = development
