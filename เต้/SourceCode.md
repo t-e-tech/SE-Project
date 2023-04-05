@@ -1,15 +1,11 @@
-# ทุก Folder สามารถ npm install ได้เลย แต่เพิ่มเติมด้านล่างที่ระบุด้วย
 
-# SERVER DEPENDENCIES
+
+4.  # SERVER DEPENDENCIES
 
     npm install bcryptjs dotenv express express-async-handler jsonwebtoken mongoose morgan
     npm install -D concurrently nodemon
 
-# FRONTEND .ENV
-
-    REACT_APP_SERVER_URL = http://localhost:5000
-
-# SERVER .ENV
+5.  # SERVER .ENV
 
     PORT = 5000
     NODE_ENV = development

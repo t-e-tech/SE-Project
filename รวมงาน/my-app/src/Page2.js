@@ -1,3 +1,4 @@
+/*
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Axios from "axios";
@@ -187,3 +188,4 @@ const Page2 = () => {
 }
 
 export default Page2
+*/

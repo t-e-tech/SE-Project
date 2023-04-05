@@ -1,3 +1,4 @@
+/*
 import React from "react";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
@@ -243,3 +244,4 @@ const Page6 = () => {
 };
 
 export default Page6
+*/

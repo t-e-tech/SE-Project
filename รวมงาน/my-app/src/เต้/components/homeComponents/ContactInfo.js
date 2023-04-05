@@ -20,8 +20,7 @@ const ContactInfo = () => {
               <i className="fas fa-map-marker-alt"></i>
             </div>
             <h5>Create by</h5>
-            <p>Pattaraton Prangprakhon</p>
-            <p>Haruethai Uthainit</p>
+            <p>FakeShopee's Team</p>
           </div>
         </div>
         <div className="col-12 col-md-4 contact-Box">
