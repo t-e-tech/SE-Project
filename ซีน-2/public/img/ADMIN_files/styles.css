@@ -1,0 +1,38 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    margin : 0;
+    padding: 0;
+}
+.container
+{
+    width: 100%;
+    max-width: 980px;
+    margin: o auto;
+    display: block;
+}
+.main-cotent
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.item
+{
+    width: 300px;
+    height: 1000px;
+    color: white;
+    background-color: #009999;
+}
+.article
+{
+    top: 20px;
+}
+.content
+{
+    width: 100%;
+    background-color: #baebe7;
+}
