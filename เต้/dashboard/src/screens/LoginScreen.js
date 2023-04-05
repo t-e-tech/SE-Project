@@ -4,6 +4,7 @@ import Loading from "../components/LoadingError/Loading";
 import Toast from "../components/LoadingError/Toast";
 import { login } from "../Redux/Actions/userActions";
 import Message from "./../components/LoadingError/Error";
+import { Link } from "react-router-dom";
 
 const Login = ({ history }) => {
   window.scrollTo(0, 0);
@@ -25,6 +26,8 @@ const Login = ({ history }) => {
     e.preventDefault();
     dispatch(login(email, password));
   };
+
+
   return (
     <>
       <Toast />
@@ -60,6 +63,9 @@ const Login = ({ history }) => {
               <button type="submit" className="btn btn-primary w-100">
                 Login
               </button>
+              <Link>
+                Create Account
+              </Link>
             </div>
           </form>
         </div>

@@ -1,3 +1,4 @@
+/*
 import InputAddress from "react-thailand-address-autocomplete";
 
 function Page7(props) {
@@ -100,3 +101,4 @@ function Page7(props) {
 }
 
 export default Page7;
+*/
