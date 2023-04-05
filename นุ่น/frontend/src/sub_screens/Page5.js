@@ -2,20 +2,21 @@ import { BrowserRouter as Router } from "react-router-dom";
 import './page.css';
 import { useState } from "react";
 import dayjs from "dayjs";
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { TimeField } from '@mui/x-date-pickers/TimeField';
 import React from "react";
 
 
 export default function Page5() {
     const [zipcode, setZipcode] = useState("");
     const [time, setTime] = React.useState(dayjs('2022-04-17T15:30'));
+    const [code, setCode] = useState("");
+    const [Cancel,SetCancel] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`Success &{zipcode}`);
+        alert(`Success: &{zipcode}`);
+    }
+    const handleCancel = ()=>{
+        SetCancel("");
     }
 
     return (
@@ -53,45 +54,34 @@ export default function Page5() {
                                 </div>
                             </div>
                         </div>
-                        <div class="box4">
-                            <span>หมายเลขคำสั่งซื้อ</span>
-                            <span form onSubmit={handleSubmit}>
-                                <input type="number" value={zipcode} onChange={(e) => setZipcode(e.target.value)} />
-                                <input type="submit" />
-                            </span>
-                            <p>
-                                <span>เวลาชำระเงิน</span>
-                                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                                    <DemoContainer omponent={['TimeField']}>
-                                        <TimeField value={time}
-                                            onChange={(newValue) => setTime(newValue)}
-                                            format="HH:mm"
-                                        />
 
+                        <form onSubmit={handleSubmit}>
+                            <div class="box4">
+                                <span>หมายเลขคำสั่งซื้อ</span>
+                                <span>
+                                    <input type="text" value={code} onChange={(e) => setCode(e.target.value)} />
+                                </span>
+                                <p>
+                                    <span>เวลาชำระเงิน</span>
+                                </p>
+                            </div>
+                            <div class="box4">
+                                <span>กรอกหมายเลขพัสดุ</span>
+                                <input type="text" value={zipcode} onChange={(e)=> setZipcode(e.target.value)}/>
+                            </div>
 
-                                    </DemoContainer>
+                            <div style={{ textAlign: 'right' }}>
+                                <p></p>
+                                <button className="btn" type="submit" onClick={handleCancel} style={{ background: '#ffcb42', }}>
+                                    ยกเลิก
+                                </button>
 
-                                </LocalizationProvider>
+                                <button className="btn" type="submit" style={{ background: '#09979B', color: 'white' }}>
+                                    ตกลง
+                                </button>
+                            </div>
+                        </form>
 
-                            </p>
-                        </div>
-                        <div class="box4">
-                            <span>กรอกหมายเลขพัสดุ</span>
-                            <p class="number">XXXXXXXXXXXXXXX</p>
-                        </div>
-
-                        <div style={{ textAlign: 'right' }}>
-                            <p></p>
-                            <button className="btn" type="button" style={{ background: '#ffcb42', }}>
-                                ยกเลิก
-                            </button>
-
-                            <button className="btn" type="button" style={{ background: '#09979B', color: 'white' }}>
-                                ตกลง
-                            </button>
-
-
-                        </div>
 
                     </div>
                 </div>

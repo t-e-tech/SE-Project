@@ -5,12 +5,12 @@ import MyAccount from "./screens/Page1";
 import { AccountCircleOutlined, PlaceOutlined, LockOutlined, ShoppingBagOutlined, NotificationsOutlined, TrendingUpOutlined, ViewInArOutlined, Tablet, MobileFriendly, DesktopWindows } from "@mui/icons-material";
 import Avatar from 'react-avatar';
 import MySell from './screens/Page2';
-import Page1 from './styles/src/Page1';
-import Page2 from './styles/src/Page2';
+import Address from './components/Address';
+import Password from './components/Password';
 import styled from '@emotion/styled';
-import Page3 from './styles/src/Page3';
-import Page4 from './styles/src/Page4';
-import Page5 from './styles/src/Page5';
+import Profits from './components/Profits';
+import Admin from './components/Admin';
+import Notification from './components/Notification';
 import { useMediaQuery } from 'react-responsive';
 
 export const NavSlide = styled(Link)`
@@ -44,7 +44,6 @@ export default function App() {
       {isTablet && <Tablet />}
       <p>This is {isPortrait ? 'portrait' : 'landscape'} orientation</p>
       {isRetina && <p>You are test retina</p>}
-
       <div className="container-fluid">
         <div className="row">
           <div className='col-auto col-md-3 col-xl-2 px-sm-2 px-0' style={{ backgroundColor: '#09979B' }}>
@@ -54,7 +53,7 @@ export default function App() {
                 ELEcREc
               </h1>
 
-              <div className='mt-3'>
+              <div className='mt-3'>่
                 <Avatar src='https://www.woolha.com/media/2020/03/eevee.png' />
 
               </div>
@@ -127,34 +126,34 @@ export default function App() {
               </Route>
 
               <Route exact path="/Address">
-                <Page1 />
+                <Address />
               </Route>
 
-
-              <Route path="/password" >
-                <Page2 />
+              <Route exact path="/password" >
+                <Password />
               </Route>
 
               <Route path="/my sell" >
                 <MySell />
               </Route>
 
-              <Route path="/notification" >
-                <Page3 />
+              <Route exact path="/notification" >
+                < Notification/>
               </Route>
 
-              <Route path="/profits" >
-                <Page4 />
+              <Route exact path="/profits" >
+                < Profits/>
               </Route>
 
-              <Route path="/admin" >
-                <Page5 />
+              <Route exact path="/admin" >
+                < Admin/>
               </Route>
             </Switch>
 
           </div>
         </div>
       </div>
+      
     </Router>
   );
 }

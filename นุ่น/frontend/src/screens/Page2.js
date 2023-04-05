@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route,NavLink as Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink as Link, Switch } from 'react-router-dom';
 import './Page1.css';
 import Avatar from 'react-avatar';
 import Container from 'react-bootstrap/Container';
@@ -8,7 +8,6 @@ import Col from 'react-bootstrap/Col';
 import Page4 from '../sub_screens/Page4';
 import Page3 from '../sub_screens/Page3';
 import Page5 from '../sub_screens/Page5';
-import Admin from '../components/Admin';
 import styled from '@emotion/styled';
 export const NavLink = styled(Link)`
     color: #000000;
@@ -28,7 +27,7 @@ export default function MySell() {
                         </div>
 
                         <div className='col-1 mt-3'>
-                            <Avatar src='https://www.woolha.com/media/2020/03/eevee.png' variant="square" size='80px'/>
+                            <Avatar src='https://www.woolha.com/media/2020/03/eevee.png' variant="square" size='80px' />
                         </div>
 
                         <div className='col-2 mt-5' style={{ fontSize: '20px' }}>
@@ -44,14 +43,14 @@ export default function MySell() {
                 <nav>
                     <Container className='box3  mt-3' style={{ fontSize: '20px' }}>
                         <Row>
-                            <Col><NavLink style={{textDecoration: 'none'}} to="/" activeStyle>ที่ยังไม่ได้จัดส่ง</NavLink></Col>
-                            <Col><NavLink style={{textDecoration: 'none'}} to="/Page3" activeStyle>จัดส่งแล้ว</NavLink></Col>
-                            <Col><NavLink style={{textDecoration: 'none'}} to="/Page4" activeStyle>สำเร็จ</NavLink></Col>
+                            <Col><NavLink style={{ textDecoration: 'none' }} to="/" activeStyle>ที่ยังไม่ได้จัดส่ง</NavLink></Col>
+                            <Col><NavLink style={{ textDecoration: 'none' }} to="/Page3" activeStyle>จัดส่งแล้ว</NavLink></Col>
+                            <Col><NavLink style={{ textDecoration: 'none' }} to="/Page4" activeStyle>สำเร็จ</NavLink></Col>
                         </Row>
                     </Container>
                 </nav>
 
-                <Link style={{textDecoration: 'none',color: 'black'}} to='/รายละเอียดคำสั่งซื้อ'>
+                <Link style={{ textDecoration: 'none', color: 'black' }} to='/รายละเอียดคำสั่งซื้อ'>
                     <div className='mt-3' style={{ width: '1220px', }}>
 
                         <div className='card w-80' style={{ margin: '10px' }}>
@@ -109,17 +108,18 @@ export default function MySell() {
                         </div>
                     </div>
                 </Link>
-                <div>
-                    <Switch>
-                        <Route exact path="/Page3"> <Page3 /> </Route>
-                        <Route exact path="/Page4"> <Page4 /> </Route>
-                        <Route exact path="/รายละเอียดคำสั่งซื้อ"> <Page5/></Route>
-                        <Route exact path='/test' component={Admin} />
-                    </Switch>
-                </div>
+
 
             </div>
+            <div>
+                <Switch>
+                    <Route exact path="/Page3"> <Page3 /> </Route>
+                    <Route exact path="/Page4"> <Page4 /> </Route>
+                    <Route exact path="/รายละเอียดคำสั่งซื้อ"> <Page5 /></Route>
 
+                </Switch>
+            </div>
+ 
 
         </Router>
 
