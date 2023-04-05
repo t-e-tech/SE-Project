@@ -1,2 +1,2 @@
 # SE-Project
- KUSRC SE 2/2022
+ KUSRC - Software Engineering 2/2022
