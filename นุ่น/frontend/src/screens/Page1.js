@@ -10,7 +10,7 @@ export default function MyAccount() {
         <Router>
             <div className="container-fluid">
                 <nav>
-                    <div className="row flex-noerap">
+                    <div className="row flex-nowrap">
                         <div className="col-sm mt-4" style={{ fontSize: '30px', color: '#09979B' }}>
                             ข้อมูลของฉัน
                         </div>
@@ -48,57 +48,56 @@ export default function MyAccount() {
                                                 <label className="col-sm-2 col-form-label" style={{ fontSize: '20px' }} >หมายเลขโทรศัพท์</label>
                                                 <div className="box1 " style={{ fontSize: '20px' }}>
                                                     064-4285976
-
                                                 </div>
 
                                                 <div><br />
 
-                                                    <div><br />
-                                                        <div className="form-group row">
-                                                            <label className="col-sm-2 col-form-label" style={{ fontSize: '20px' }}>
-                                                                Email
-                                                            </label>
-                                                            <div className="box1" style={{ fontSize: '20px' }}>
-                                                                kanthida.th@ku.th
-                                                            </div>
+                                                    <div className="form-group row">
+                                                        <label className="col-sm-2 col-form-label" style={{ fontSize: '20px' }}>
+                                                            Email
+                                                        </label>
+                                                        <div className="box1" style={{ fontSize: '20px' }}>
+                                                            kanthida.th@ku.th
                                                         </div>
-                                                    </div >
 
-                                                    <div><br />
-                                                        <div className="form-group-row">
-                                                            <label className=" col-form-label" style={{ fontSize: '20px' }}>
-                                                                ช่องทางที่สะดวกจัดส่ง
-                                                            </label>
-                                                            <div className="box1" style={{ fontSize: '20px' }}>
-                                                                J&T<p />
-                                                                <p className="form-text small text-muted" style={{ fontSize: '15px', textAlign: 'end' }}>
-                                                                    * เลือกได้มากกว่า 1
-                                                                </p>
+                                                        <div><br />
+                                                            <div className="form-group-row">
+                                                                <label className="col-sm-2 col-form-label" style={{ fontSize: '20px' }}>
+                                                                    ช่องทางที่สะดวกจัดส่ง
+                                                                </label>
+                                                                <div className="box1" style={{ fontSize: '20px' }}>
+                                                                    J&T<p />
+                                                                    <p className="form-text small text-muted" style={{ fontSize: '15px', textAlign: 'end' }}>
+                                                                        * เลือกได้มากกว่า 1
+                                                                    </p>
+                                                                </div>
+
+                                                                <div><br />
+                                                                    <div className="form-group row">
+                                                                        <p></p>
+                                                                        <FormControl component="fieldset"><br />
+                                                                            <FormGroup aria-label='position' row>
+                                                                                <FormControlLabel value="end"
+                                                                                    control={<CheckBox />}
+                                                                                    label="J&T"
+                                                                                    labelPlacement='end'
+                                                                                />
+                                                                                <FormControlLabel value="end"
+                                                                                    control={<CheckBox />}
+                                                                                    label="DHL"
+                                                                                    labelPlacement='end' />
+                                                                                <FormControlLabel value="end"
+                                                                                    control={<CheckBox />}
+                                                                                    label="ไปรษณีย์ไทยEMS"
+                                                                                    labelPlacement='end' />
+                                                                            </FormGroup>
+                                                                        </FormControl>
+                                                                    </div>
+                                                                </div>
+
                                                             </div>
-
                                                         </div>
                                                     </div>
-                                                    <p></p>
-                                                    <FormControl component="fieldset"><br />
-                                                        <FormGroup aria-label='position' row>
-                                                            <FormControlLabel value="end"
-                                                                control={<CheckBox />}
-                                                                label="J&T"
-                                                                labelPlacement='end'
-                                                            />
-                                                            <FormControlLabel value="end"
-                                                                control={<CheckBox />}
-                                                                label="DHL"
-                                                                labelPlacement='end' />
-                                                            <FormControlLabel value="end"
-                                                                control={<CheckBox />}
-                                                                label="ไปรษณีย์ไทยEMS"
-                                                                labelPlacement='end' />
-                                                        </FormGroup>
-                                                    </FormControl>
-
-
-
                                                 </div>
                                             </div>
                                         </div>

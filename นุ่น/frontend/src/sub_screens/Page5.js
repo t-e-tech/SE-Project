@@ -3,31 +3,36 @@ import './page.css';
 import { useState } from "react";
 import dayjs from "dayjs";
 import React from "react";
-
-
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import {TimePicker} from "antd";
+dayjs.extend(customParseFormat);
+const onChange = (time,timeString)=>{
+    console.log(time,timeString);
+};
 export default function Page5() {
     const [zipcode, setZipcode] = useState("");
-    const [time, setTime] = React.useState(dayjs('2022-04-17T15:30'));
     const [code, setCode] = useState("");
-    const [Cancel,SetCancel] = useState("");
+    
 
     const handleSubmit = (event) => {
         event.preventDefault();
         alert(`Success: &{zipcode}`);
     }
     const handleCancel = ()=>{
-        SetCancel("");
+        setZipcode("");
+        setCode("");
+        
     }
 
     return (
         <Router>
             <div className="container-fluid">
-                <div className="row flex-nowarp">
-                    <div className="box mt-2">
+                <div className="row flex-nowarp" style={{paddingLeft:'50px'}}>
+                    <div className=" mt-2" style={{width:'1200px',height:'725px',background:'#ffffff',paddingTop:'15px',paddingLeft:'20px',borderRadius:'20px'}}>
                         <p >รายละเอียดคำสั่งซื้อ</p>
                         <p >ที่อยู่ในการจัดส่ง</p>
                         <div className="box1">
-                            <p>มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา | 0-3835-4580-4 | เลขที่ 199 หมู่ 6 ถนนสุขุมวิท ต.ทุ่งสุขลา อ.ศรีราชา จ.ชลบุรี 20230 </p>
+                            มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา | 0-3835-4580-4 | เลขที่ 199 หมู่ 6 ถนนสุขุมวิท ต.ทุ่งสุขลา อ.ศรีราชา จ.ชลบุรี 20230
                         </div>
                         <p className="mt-3">สินค้าที่สั่งซื้อ</p>
                         <div className='mt-2' style={{ width: '1000px' }}>
@@ -63,6 +68,7 @@ export default function Page5() {
                                 </span>
                                 <p>
                                     <span>เวลาชำระเงิน</span>
+                                    <TimePicker onChange={onChange} defaultOpenValue={dayjs('00:00','HH:mm')}  style={{textAlign: 'end'}}/>
                                 </p>
                             </div>
                             <div class="box4">

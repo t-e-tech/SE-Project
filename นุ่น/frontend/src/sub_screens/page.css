@@ -1,7 +1,7 @@
 .box{
     border-radius: 20px;
     width: 1200px;
-    
+    padding-top: 10px;
     padding-left: 20px;
     background-color: aliceblue;
     
@@ -9,10 +9,8 @@
 
 .box1{
     
-    padding-top: 22px;
     border-radius: 20px;
-    width: 500px;
-    
+    width: 1000px;
     background-color: #F5F5F5;
 }
 
@@ -49,4 +47,8 @@
 
 .btn{
     margin-left: 10px;
+}
+
+.group{
+    position: absolute;
 }

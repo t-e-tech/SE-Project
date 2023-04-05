@@ -1,11 +1,10 @@
-import { BrowserRouter as Router } from "react-router-dom";
 import './page.css';
 export default function Process() {
     return (
-        <Router>
+        
             <div className="container-fluid">
-                <div className="row flex-nowarp">
-                    <div className="box mt-2">
+                <div className="row flex-nowarp" style={{paddingLeft:'50px'}}>
+                    <div className="mt-2" style={{width:'1200px',height:'725px',background:'#ffffff',paddingTop:'15px',paddingLeft:'20px',borderRadius:'20px'}}>
                         <p >รายละเอียดคำสั่งซื้อ</p>
                         <p >ที่อยู่ในการจัดส่ง</p>
                         <div className="box1">
@@ -58,6 +57,6 @@ export default function Process() {
                     </div>
                 </div>
             </div>
-        </Router>
+        
     );
 }
