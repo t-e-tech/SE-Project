@@ -63,7 +63,7 @@ const Header = () => {
             <div className="container ">
               <div className="row ">
                 <div className="col-6 d-flex align-items-center">
-                  <Link className="navbar-brand" to="/">
+                  <Link className="navbar-brand" to="/homescreen">
                     <img alt="logo" src="/images/logo.png" />
                   </Link>
                 </div>
@@ -129,9 +129,18 @@ const Header = () => {
                       placeholder="Search"
                       onChange={(e) => setKeyword(e.target.value)}
                     />
-                    <button type="submit" className="search-button">
+                    <button
+                      type="submit"
+                      className="search-button"
+                      disabled={!keyword}
+                    >
                       search
                     </button>
+                    {!keyword && (
+                      <div className="invalid-feedback">
+                        Please enter a keyword to search.
+                      </div>
+                    )}
                   </form>
                 </div>
               </div>
@@ -142,7 +151,7 @@ const Header = () => {
           <div className="pc-header">
             <div className="row">
               <div className="col-md-3 col-4 d-flex align-items-center">
-                <Link className="navbar-brand" to="/">
+                <Link className="navbar-brand" to="/homescreen">
                   <img alt="logo" src="/images/logo.png" />
                 </Link>
               </div>
@@ -154,9 +163,18 @@ const Header = () => {
                     placeholder="Search"
                     onChange={(e) => setKeyword(e.target.value)}
                   />
-                  <button type="submit" className="search-button">
+                  <button
+                    type="submit"
+                    className="search-button"
+                    disabled={!keyword}
+                  >
                     search
                   </button>
+                  {!keyword && (
+                    <div className="invalid-feedback">
+                      Please enter a keyword to search.
+                    </div>
+                  )}
                 </form>
               </div>
               <div className="col-md-3 d-flex align-items-center justify-content-end Login-Register">

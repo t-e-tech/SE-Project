@@ -5,6 +5,7 @@ import ReactDOM from "react-dom"; //เป็นการ import library ReactDO
 import App from "./App"; //เป็นการ import component App ที่ถูกสร้างขึ้นจากไฟล์ App.js ซึ่งเป็นหน้า view หลักของแอปพลิเคชัน
 import store from "./Redux/store"; //เป็นการ import store ที่เก็บ state ของแอปพลิเคชัน ซึ่งเป็นส่วนหนึ่งของ Redux
 import { Provider } from "react-redux"; //เป็นการ import Provider component จาก library react-redux เพื่อใช้เชื่อมต่อ Redux store กับ App
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <Provider store={store}>

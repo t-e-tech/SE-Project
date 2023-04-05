@@ -655,3 +655,59 @@ textarea:focus {
   background-color: black;
   border: 1px solid black;
 }
+
+/* Firstpage */
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+/* Styles for large screens */
+.firstpage {
+  background-image: url(https://amainsider.com/wp-content/uploads/2020/10/electric-cars-in-alberta-charging-station.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstpage-button {
+  background-color: #FFD700;
+  color: #000000;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10rem;
+  margin-bottom: 10rem;
+  font-family: 'Prompt', sans-serif;
+}
+
+.firstpage-button:last-child{
+  margin-right: 0;
+}
+
+.firstpage-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .firstpage-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .firstpage-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
