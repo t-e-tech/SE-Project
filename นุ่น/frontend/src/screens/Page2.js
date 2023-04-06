@@ -10,7 +10,8 @@ import Page3 from '../sub_screens/Page3';
 import Page5 from '../sub_screens/Page5';
 import styled from '@emotion/styled';
 export const NavLink = styled(Link)`
-    color: #000000;
+    // color: #000000;
+    background-color: #000000
     &.active{
         color: #FFCB42;
     }
@@ -21,7 +22,7 @@ export default function MySell() {
         <Router>
             <div className="container-fluid">
                 <nav>
-                    <div className="row">
+                    <div className="row flex-nowrap">
                         <div className="col-sm mt-4" style={{ fontSize: '30px', color: '#09979B' }}>
                             การขายของฉัน
                         </div>
@@ -41,17 +42,17 @@ export default function MySell() {
                 </nav>
 
                 <nav>
-                    <Container className='box3  mt-3' style={{ fontSize: '20px' }}>
+                    <Container className='mt-3 md-2' style={{width:'1200px',height:'50px',borderRadius:'10px',textAlign:'center',paddingTop:'10px', fontSize: '20px' }}>
                         <Row>
-                            <Col><NavLink style={{ textDecoration: 'none' }} to="/" activeStyle>ที่ยังไม่ได้จัดส่ง</NavLink></Col>
-                            <Col><NavLink style={{ textDecoration: 'none' }} to="/Page3" activeStyle>จัดส่งแล้ว</NavLink></Col>
-                            <Col><NavLink style={{ textDecoration: 'none' }} to="/Page4" activeStyle>สำเร็จ</NavLink></Col>
+                            <Col><NavLink activeStyle style={{ textDecoration: 'none' }} to="/" >ที่ยังไม่ได้จัดส่ง</NavLink></Col>
+                            <Col><NavLink activeStyle style={{ textDecoration: 'none' }} to="/Page3" >จัดส่งแล้ว</NavLink></Col>
+                            <Col><NavLink activeStyle style={{ textDecoration: 'none' }} to="/Page4" >สำเร็จ</NavLink></Col>
                         </Row>
                     </Container>
                 </nav>
 
                 <Link style={{ textDecoration: 'none', color: 'black' }} to='/รายละเอียดคำสั่งซื้อ'>
-                    <div className='mt-3' style={{ width: '1220px', }}>
+                    <div className='mt-3' style={{ width: '1300px', paddingLeft:'28px'}}>
 
                         <div className='card w-80' style={{ margin: '10px' }}>
                             <div className='card-body'>
@@ -82,7 +83,7 @@ export default function MySell() {
 
                     </div>
 
-                    <div className='mt-3' style={{ width: '1220px', }}>
+                    <div className='mt-3' style={{ width: '1300px',paddingLeft:'28px'}}>
                         <div className='card w-80' style={{ margin: '10px' }}>
                             <div className='card-body'>
                                 <h5 className='card-title'>

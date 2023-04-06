@@ -8,7 +8,7 @@ export default function Page3() {
         <Router>
             <div className="container-fluid">
                 <Link style={{textDecoration: 'none',color: 'black'}} to='/ขั้นตอนการสั่งซื้อ'>
-                <div className='mt-3' style={{ width: '1220px', }}>
+                <div className='mt-3' style={{ width: '1300px',paddingLeft:'28px' }}>
                     <div className='card w-80' style={{ margin: '10px' }}>
                         <div className='card-body'>
                             <h5 className='card-title'>
@@ -40,11 +40,11 @@ export default function Page3() {
                 
             </div>
 
-            <div>
+            
                 <Switch>
                     <Route path='/ขั้นตอนการสั่งซื้อ' component={Process}/>
                 </Switch>
-            </div>
+            
         </Router>
 
     );

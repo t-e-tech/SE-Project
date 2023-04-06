@@ -9,7 +9,7 @@ export default function Page4() {
             <div className="container-fluid">
                 <div className="colunm flex-nowrap">
                     <Link style={{textDecoration: 'none',color: 'black'}} to='/เสร็จสิ้น'>
-                        <div className='mt-3' style={{ width: '1220px', }}>
+                        <div className='mt-3' style={{ width: '1300px',paddingLeft:'28px' }}>
                             <div className='card w-80' style={{ margin: '10px' }}>
                                 <div className='card-body'>
                                     <h5 className='card-title'>

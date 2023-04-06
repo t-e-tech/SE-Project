@@ -2,16 +2,16 @@ import './App.css';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link, } from 'react-router-dom';
 import MyAccount from "./screens/Page1";
-import { AccountCircleOutlined, PlaceOutlined, LockOutlined, ShoppingBagOutlined, NotificationsOutlined, TrendingUpOutlined, ViewInArOutlined, Tablet, MobileFriendly, DesktopWindows } from "@mui/icons-material";
+import { AccountCircleOutlined, PlaceOutlined, LockOutlined, ShoppingBagOutlined, NotificationsOutlined, TrendingUpOutlined, ViewInArOutlined } from "@mui/icons-material";
 import Avatar from 'react-avatar';
 import MySell from './screens/Page2';
-import Address from './components/Address';
 import Password from './components/Password';
 import styled from '@emotion/styled';
 import Profits from './components/Profits';
 import Admin from './components/Admin';
 import Notification from './components/Notification';
-import { useMediaQuery } from 'react-responsive';
+// {import { useMediaQuery } from 'react-responsive';}
+import Setdescription from './sub_screens/Set';
 
 export const NavSlide = styled(Link)`
   background: #09979B;
@@ -22,28 +22,28 @@ export const NavSlide = styled(Link)`
 
 
 export default function App() {
-  const isDesktop = useMediaQuery({
-    query: "(min-width: 1224px)"
-  });
-  const isMobile = useMediaQuery({
-    query: "(max-width: 786px)"
-  });
-  const isTablet = useMediaQuery({
-    query: "(min-width: 1224px)"
-  });
-  const isPortrait = useMediaQuery({
-    query: "(orientation: portrait)"
-  });
-  const isRetina = useMediaQuery({
-    query: "(min-resolution: 300dpi)"
-  });
+  // {const isDesktop = useMediaQuery({
+  //   query: "(min-width: 1224px)"
+  // });
+  // const isMobile = useMediaQuery({
+  //   query: "(max-width: 786px)"
+  // });
+  // const isTablet = useMediaQuery({
+  //   query: "(min-width: 1224px)"
+  // });
+  // const isPortrait = useMediaQuery({
+  //   query: "(orientation: portrait)"
+  // });
+  // const isRetina = useMediaQuery({
+  //   query: "(min-resolution: 300dpi)"
+  // });}
   return (
     <Router>
-      {isDesktop && <DesktopWindows />}
+      {/* {{isDesktop && <DesktopWindows />}
       {isMobile && <MobileFriendly />}
       {isTablet && <Tablet />}
       <p>This is {isPortrait ? 'portrait' : 'landscape'} orientation</p>
-      {isRetina && <p>You are test retina</p>}
+      {isRetina && <p>You are test retina</p>}} */}
       <div className="container-fluid">
         <div className="row">
           <div className='col-auto col-md-3 col-xl-2 px-sm-2 px-0' style={{ backgroundColor: '#09979B' }}>
@@ -126,7 +126,7 @@ export default function App() {
               </Route>
 
               <Route exact path="/Address">
-                <Address />
+                <Setdescription />
               </Route>
 
               <Route exact path="/password" >
