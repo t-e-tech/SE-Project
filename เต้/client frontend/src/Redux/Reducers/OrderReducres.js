@@ -80,3 +80,16 @@ export const orderListMyReducer = (state = { orders: [] }, action) => {
       return state;
   }
 };
+
+/*
+
+​orderPayReducer ซึ่งจะรับ state และ action แล้วส่ง state ใหม่ออกมาตาม logic ของ action ที่ถูก dispatch มาโดยใช้ switch case 
+ในการตรวจสอบ action type ที่ถูกส่งมา โดยจะมี case ดังนี้
+
+ORDER_PAY_REQUEST: กรณีที่ action type เป็น ORDER_PAY_REQUEST จะส่ง state ใหม่กลับมาโดยกำหนด loading เป็น true เพื่อแสดงว่าขณะนี้มีการทำงานอยู่
+ORDER_PAY_SUCCESS: กรณีที่ action type เป็น ORDER_PAY_SUCCESS จะส่ง state ใหม่กลับมาโดยกำหนด loading เป็น false และ success เป็น true เพื่อแสดงว่าการทำงานเสร็จสมบูรณ์และสำเร็จ
+ORDER_PAY_FAIL: กรณีที่ action type เป็น ORDER_PAY_FAIL จะส่ง state ใหม่กลับมาโดยกำหนด loading เป็น false และ error เป็นข้อความผิดพลาดที่ถูกส่งมาใน payload ของ action เพื่อแสดงว่าการทำงานไม่สำเร็จ
+ORDER_PAY_RESET: กรณีที่ action type เป็น ORDER_PAY_RESET จะส่ง state ใหม่กลับมาโดยกำหนดเป็น object ว่างเพื่อรีเซ็ตค่า state กลับไปเป็นค่าเริ่มต้น
+default: กรณีอื่นๆ จะส่ง state เดิมกลับมาโดยไม่มีการเปลี่ยนแปลงใดๆ ในการทำงาน
+
+*/

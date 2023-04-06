@@ -8,13 +8,15 @@ const PaymentScreen = ({ history }) => {
 
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
-  //ดึงข้อมูลที่อยู่จากหน้าชิปป้งมา
+  //ดึงข้อมูลที่อยู่จากหน้าชิปป้งมาตรวจสอบว่ามีการจัดส่งหรือไม่
 
   if (!shippingAddress) {
     history.push("/shipping");
   }
+  //ถ้าไม่มี จะให้กลับไปที่หน้ากรอกข้อมูลจัดส่งก่อน
 
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
+  //กำหนดค่าเริ่มต้นให้กับ state ของ paymentMethod โดยใช้ useState
 
   const dispatch = useDispatch();
 
@@ -23,8 +25,9 @@ const PaymentScreen = ({ history }) => {
     dispatch(savePaymentMethod(paymentMethod));
     history.push("/placeorder");
   };
+  //เป็นฟังก์ชันsubmit เพื่อส่งค่าไปยังหน้าplaceorder เตรียมจ่าตัง โดยใช้ history.push(/placeorder) ในการลิ้ง์ไปหน้านี้
 
-  
+
   return (
     <>
       <Header />

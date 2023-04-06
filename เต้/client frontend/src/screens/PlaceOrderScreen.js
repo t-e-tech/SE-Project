@@ -9,19 +9,20 @@ import Message from "./../components/LoadingError/Error";
 const PlaceOrderScreen = ({ history }) => {
   window.scrollTo(0, 0);
 
-  const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch(); //เป็น hook ของ Redux ที่ใช้ในการ dispatch actions
+  const cart = useSelector((state) => state.cart); //ใช้ในการเลือก state จาก store เพื่อนำมาใช้ใน component
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
-  // Calculate Price
+  // คำนวนราคา
   const addDecimals = (num) => {
     return (Math.round(num * 100) / 100).toFixed(2);
   };
-
+  //บวกราคาสินค้าใสนตระกร้าทุกชิ้น
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
+  //คำนวนค่าส่งและค่าภาษี
   cart.shippingPrice = addDecimals(30);
   cart.taxPrice = addDecimals(Number((0 * cart.itemsPrice).toFixed(2)));
   cart.totalPrice = (
