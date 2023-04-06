@@ -8,19 +8,24 @@ const ShippingScreen = ({ history }) => {
 
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
+  //ดึงข้อมูลจาก sate
 
   const [address, setAddress] = useState(shippingAddress.address);
   const [city, setCity] = useState(shippingAddress.city);
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
   const [country, setCountry] = useState(shippingAddress.country);
+  //อันนี้คือดึงค่าที่อยู่ที่เคยกรอก หรือ ยังไม่เคยกรอก ก็จะให้กรอกในหน้ารี้เพือใส่ที่อยู่ในการส่งของ
 
   const dispatch = useDispatch();
+  //เป็นการ dispatch ฟังก์ชัน แล้วเซฟที่อยู่ที่กรอกมา แล้วส่งข้อมูลการจัดส่งของผู้ใช้งานที่กรอกเข้าไป 
 
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(saveShippingAddress({ address, city, postalCode, country }));
     history.push("/payment");
   };
+  //ในส่วนนี้จะส่งข้อมูลการจัดส่งแล้วไปที่หน้าจ่ายเงิน
+
   return (
     <>
       <Header />

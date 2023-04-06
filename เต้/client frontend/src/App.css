@@ -354,7 +354,7 @@ textarea:focus {
 }
 .round-black-btn:hover,
 .round-black-btn:focus {
-  background: #1cb803;
+  background: #009999;
 }
 
 /* LOGIN */
@@ -387,7 +387,7 @@ textarea:focus {
   margin-top: 20px;
   padding: 20px 0;
   border: 0;
-  background-color: #1cb803;
+  background-color: #009999;
   border-radius: 5px;
   text-transform: uppercase;
   color: white;
@@ -472,7 +472,7 @@ textarea:focus {
   margin-top: 20px;
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #1cb803;
+  background-color: #009999;
   color: #ffffff;
 }
 /* orders */
@@ -565,7 +565,7 @@ textarea:focus {
   border: 0px;
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #1cb803;
+  background-color: #009999;
   color: #ffffff;
 }
 .cart-buttons a:nth-child(1) button {
@@ -642,7 +642,7 @@ textarea:focus {
   border: 0px;
   text-transform: uppercase;
   font-size: 13px;
-  background-color: #1cb803;
+  background-color: #009999;
   color: #ffffff;
 }
 
