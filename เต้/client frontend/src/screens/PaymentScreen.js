@@ -8,6 +8,7 @@ const PaymentScreen = ({ history }) => {
 
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
+  //ดึงข้อมูลที่อยู่จากหน้าชิปป้งมา
 
   if (!shippingAddress) {
     history.push("/shipping");
@@ -22,6 +23,8 @@ const PaymentScreen = ({ history }) => {
     dispatch(savePaymentMethod(paymentMethod));
     history.push("/placeorder");
   };
+
+  
   return (
     <>
       <Header />

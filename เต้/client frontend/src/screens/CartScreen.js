@@ -20,14 +20,18 @@ const CartScreen = ({ match, location, history }) => {
       dispatch(addToCart(productId, qty));
     }
   }, [dispatch, productId, qty]);
+  //เพิ่มสินค้าลงในตะกร้า
 
   const checkOutHandler = () => {
     history.push("/login?redirect=shipping");
   };
+  //นำผู้ใช้งานไปยังหน้า Login เพื่อทำการสั่งซื้อสินค้า โดยใช้ history.push()
 
   const removeFromCartHandle = (id) => {
     dispatch(removefromcart(id));
   };
+  //ลบสินค้าออกจากตะกร้าโดยใช้ dispatch ในส่วนของ cartActions
+
   return (
     <>
       <Header />
